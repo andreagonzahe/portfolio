@@ -1,5 +1,5 @@
 import { Code2, Lightbulb, Briefcase, GraduationCap } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 const skillCategories = [
   {

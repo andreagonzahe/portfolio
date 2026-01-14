@@ -1,5 +1,5 @@
 import { TrendingUp, DollarSign, Users, FileText, Sparkles, Download } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 const highlights = [
   {

@@ -1,5 +1,5 @@
 import { ExternalLink, CheckCircle2 } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { DemoRequestForm } from './DemoRequestForm';
 

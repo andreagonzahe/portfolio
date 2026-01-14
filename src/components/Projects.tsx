@@ -1,5 +1,5 @@
 import { ProjectCard } from './ProjectCard';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import sparkenImg from 'figma:asset/b5cbae4738d180c32d0d26827591eede0d373689.png';
 import sparkenLandingImg from 'figma:asset/115294fdc42bae9c2023d23823de97061181d1fc.png';
 import auditToolImg from 'figma:asset/b5ba49ff7930394b41df5e895d2062e211b64be7.png';
