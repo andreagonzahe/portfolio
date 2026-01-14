@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 export function Hero() {
   return (
-    <section className="relative py-12 sm:py-20 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center max-w-4xl mx-auto">
           <motion.h2 
             className="text-xl sm:text-2xl text-slate-600 mb-3 font-medium"
