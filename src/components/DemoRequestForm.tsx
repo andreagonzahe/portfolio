@@ -56,22 +56,24 @@ export function DemoRequestForm({ isOpen, onClose, projectTitle }: DemoRequestFo
             onClick={onClose}
           />
 
-          {/* Modal */}
-          <motion.div
-            ref={(el) => {
-              // #region agent log
-              if (el) {
-                const rect = el.getBoundingClientRect();
-                const viewport = { w: window.innerWidth, h: window.innerHeight };
-                fetch('http://127.0.0.1:7246/ingest/d358b044-4186-498e-8a62-a45c57f6c974',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'DemoRequestForm.tsx:64',message:'Modal rendered',data:{rect:{top:rect.top,left:rect.left,width:rect.width,height:rect.height},viewport,computedStyle:{position:window.getComputedStyle(el).position,transform:window.getComputedStyle(el).transform,left:window.getComputedStyle(el).left,top:window.getComputedStyle(el).top}},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'H1,H2,H3,H4'})}).catch(()=>{});
-              }
-              // #endregion
-            }}
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-lg bg-white rounded-2xl shadow-2xl z-50 max-h-[90vh] overflow-y-auto"
-          >
+          {/* Modal Container - Handles Centering */}
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            {/* Modal - Handles Animation */}
+            <motion.div
+              ref={(el) => {
+                // #region agent log
+                if (el) {
+                  const rect = el.getBoundingClientRect();
+                  const viewport = { w: window.innerWidth, h: window.innerHeight };
+                  fetch('http://127.0.0.1:7246/ingest/d358b044-4186-498e-8a62-a45c57f6c974',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'DemoRequestForm.tsx:64',message:'Modal rendered',data:{rect:{top:rect.top,left:rect.left,width:rect.width,height:rect.height},viewport,computedStyle:{position:window.getComputedStyle(el).position,transform:window.getComputedStyle(el).transform,left:window.getComputedStyle(el).left,top:window.getComputedStyle(el).top},runId:'post-fix'},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'H3'})}).catch(()=>{});
+                }
+                // #endregion
+              }}
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="w-full max-w-lg bg-white rounded-2xl shadow-2xl max-h-[90vh] overflow-y-auto"
+            >
             {/* Header */}
             <div className="sticky top-0 bg-gradient-to-r from-indigo-600 to-purple-600 p-6 rounded-t-2xl">
               <div className="flex items-start justify-between">
@@ -191,6 +193,7 @@ export function DemoRequestForm({ isOpen, onClose, projectTitle }: DemoRequestFo
               )}
             </div>
           </motion.div>
+          </div>
         </>
       )}
     </AnimatePresence>
