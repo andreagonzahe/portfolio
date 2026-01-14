@@ -60,15 +60,6 @@ export function DemoRequestForm({ isOpen, onClose, projectTitle }: DemoRequestFo
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             {/* Modal - Handles Animation */}
             <motion.div
-              ref={(el) => {
-                // #region agent log
-                if (el) {
-                  const rect = el.getBoundingClientRect();
-                  const viewport = { w: window.innerWidth, h: window.innerHeight };
-                  fetch('http://127.0.0.1:7246/ingest/d358b044-4186-498e-8a62-a45c57f6c974',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'DemoRequestForm.tsx:64',message:'Modal rendered',data:{rect:{top:rect.top,left:rect.left,width:rect.width,height:rect.height},viewport,computedStyle:{position:window.getComputedStyle(el).position,transform:window.getComputedStyle(el).transform,left:window.getComputedStyle(el).left,top:window.getComputedStyle(el).top},runId:'post-fix'},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'H3'})}).catch(()=>{});
-                }
-                // #endregion
-              }}
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
