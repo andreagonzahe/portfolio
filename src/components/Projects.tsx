@@ -106,10 +106,9 @@ const projects = [
     ],
     techStack: ['React', 'Next.js', 'Supabase', 'Vercel'],
     status: 'Live and in personal use',
-    note: 'Request password to view',
     image: projectMgmtImg,
     links: [
-      { label: 'View Live', url: 'https://simple-project-manager-vert.vercel.app' },
+      { label: 'View Demo', url: 'https://simple-project-manager-demo.vercel.app/' },
     ],
   },
   {
